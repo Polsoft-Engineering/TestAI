@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorWebAI.Client\BlazorWebAI.Client.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
   </ItemGroup>
 
 </Project>

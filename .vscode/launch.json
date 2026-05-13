@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Launch Server (coreclr) - SSR/Server only",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/BlazorWebAI/BlazorWebAI/bin/Debug/net10.0/BlazorWebAI.dll",
+            "cwd": "${workspaceFolder}/BlazorWebAI/BlazorWebAI",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false,
+            "justMyCode": true,
+            "symbolOptions": {
+                "searchMicrosoftSymbolServer": false,
+                "searchNuGetOrgSymbolServer": false
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "DOTNET_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:7181;http://localhost:5012"
+            },
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+https://[^:]+:(\\d+)",
+                "uriFormat": "https://localhost:%s"
+            }
+        },
+        {
+            "name": "Blazor WebAssembly (Hosted) - Server + WASM Client",
+            "type": "blazorwasm",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "hosted": true,
+            "program": "${workspaceFolder}/BlazorWebAI/BlazorWebAI/bin/Debug/net10.0/BlazorWebAI.dll",
+            "cwd": "${workspaceFolder}/BlazorWebAI/BlazorWebAI",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "DOTNET_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:7181;http://localhost:5012"
+            }
+        }
+    ]
+}

@@ -30,4 +30,4 @@ app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(BlazorWebAI.Client._Imports).Assembly);
 
-app.Run();
+await app.RunAsync();
